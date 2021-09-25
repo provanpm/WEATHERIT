@@ -26,7 +26,7 @@ Use this weather application as an easy one-stop area for your trip and weather 
 
 ## Storyboard
 
-![Storyboard](https://github.com/phamrina/Park-Finder/blob/main/phone.PNG)
+![Storyboard]()
 
 ## Functional Requirements
 
@@ -120,7 +120,7 @@ Park names / locations are stated in English.
 
 ## Class Diagram
 
-![ClassDiagram](https://github.com/phamrina/Park-Finder/blob/main/Class%20Diagram%20(parkfinder).png)
+![ClassDiagram]()
 
 ### Class Diagram Description
 
@@ -153,4 +153,4 @@ Park names / locations are stated in English.
 
 Sunday at 5 PM.  Use this Teams:
 
-[Office Hours Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzYwYzQ3ZGEtNDkzNS00ZTU4LWEzYWItY2UwNzM3YzZkMzJh%40thread.v2/0?context=%7b%22Tid%22%3a%22f5222e6c-5fc6-48eb-8f03-73db18203b63%22%2c%22Oid%22%3a%225e43e7e5-c6e8-44a8-8867-fdf93cf9d11c%22%7d)
+[Office Hours Teams]()
