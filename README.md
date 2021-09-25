@@ -30,7 +30,7 @@ Use this weather application as an easy one-stop area for your trip and weather 
 
 ## Functional Requirements
 
-### Requirement 100.0: View Weather at Current Location
+### Requirement 100: View Weather at Current Location
 
 #### Scenario
 
@@ -56,7 +56,7 @@ Device has working GPS
 
 **Then** they should see a description of their current weather (temperature, wind, clouds, etc.)
 
-### Requirement 101.0: View Weather at Any Location
+### Requirement 101: View Weather at Any Location
 
 #### Scenario
 
