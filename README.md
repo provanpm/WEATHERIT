@@ -100,13 +100,13 @@ As a user interested in knowing the weather at a location at any given time, the
 
 #### Dependencies
 
-Park search data is available and accessible.  
+weather search data is available and accessible.  
 
 #### Assumptions
 
 Desired locations are in the United States 
 
-Park names / locations are stated in English.  
+weather  / locations are stated in English.  
 
 #### Examples  
 
@@ -151,6 +151,6 @@ Park names / locations are stated in English.
 
 ## Weekly Meeting
 
-Saturday 4PM.  Use this Teams:
+Sunday at 5 PM.  Use this Teams:
 
 [Office Hours Teams]()
