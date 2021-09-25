@@ -100,13 +100,13 @@ As a user interested in knowing the weather at a location at any given time, the
 
 #### Dependencies
 
-weather search data is available and accessible.  
+Weather search data is available and accessible.  
 
 #### Assumptions
 
 Desired locations are in the United States 
 
-weather  / locations are stated in English.  
+Weather  / locations are stated in English.  
 
 #### Examples  
 
@@ -151,6 +151,6 @@ weather  / locations are stated in English.
 
 ## Weekly Meeting
 
-Sunday at 5 PM.  Use this Teams:
+Saturday at 4PM.  Use this Teams:
 
-[Office Hours Teams]()
+[Office Hours Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2FkNDRmNTItY2RjYi00YmJkLTk1NmUtNjIyYzA3YmM5NDVi%40thread.v2/0?context=%7b%22Tid%22%3a%22f5222e6c-5fc6-48eb-8f03-73db18203b63%22%2c%22Oid%22%3a%2231f36615-1822-4e47-80da-e5d51d4ad6d1%22%7d)
