@@ -149,6 +149,10 @@ Weather  / locations are stated in English.
 - Integration Developer: Rishabh Sharma, Jaishri Thakur
 - Frontend Developer: Paul Provan, Travis Newberry
 
+## Jira Board
+
+[Jira Project Link](https://weatherit.atlassian.net/jira/software/projects/WEATHER/boards/1/roadmap?shared=&atlOrigin=eyJpIjoiNDI0NDM2YjE3NDBiNDc4Mjg1N2IwMTA4ZjNmMTdkMTUiLCJwIjoiaiJ9)
+
 ## Weekly Meeting
 
 Saturday at 4PM.  Use this Teams:
