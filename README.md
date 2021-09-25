@@ -151,6 +151,6 @@ Park names / locations are stated in English.
 
 ## Weekly Meeting
 
-Sunday at 5 PM.  Use this Teams:
+Saturday 4PM.  Use this Teams:
 
 [Office Hours Teams]()
