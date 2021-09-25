@@ -16,14 +16,13 @@ Jaishri Thakur
 
 ## Introduction
 
-Looking for something to do outdoors? Planning a day at your favorite park? Park Finder can help
+When planning a day outdoors, the first and most important thing to know is what the weather will be.
 
-- Cache your local greenspaces and public parks
-- Save images and descriptions of your favorite locations
-- Add notes and more about specific park visits
-- Search a database of outdoor spaces
+- See the weather situation at your current location
+- View the weather conditions where you plan to go
+- Save various locations for easy viewing
 
-Use your mobile device as a hub for all the information you'll need to plan you trip to the park. Location, description, visualization and general information are all features someone can utilize with this app to make their plans for the day.
+Use this weather application as an easy one-stop area for your trip and weather planning needs
 
 ## Storyboard
 
@@ -31,45 +30,37 @@ Use your mobile device as a hub for all the information you'll need to plan you 
 
 ## Functional Requirements
 
-### Requirement 100.0: Add Park
+### Requirement 100.0: View Weather at Current Location
 
 #### Scenario
 
-As a user interested in a park, they should be able to add a new park with name, image, description and location  
+As a user interested in a knowing their current weather, they should be able to view the weather situation for their current location
 
 #### Dependencies
 
-Camera permissions
+Location access
 
 Device has internet connection
 
 #### Assumptions
 
-Device has working camera
+Device has working GPS
 
 #### Examples
 
 1.1  
 
-**Given** a user is adding a new park 
+**Given** a user is viewing the weather at their current location
 
-**When**  they click add park  
+**When**  they click view weather at my location
 
-**Then** it should be verefied they have included name and location
+**Then** they should see a description of their current weather (temperature, wind, clouds, etc.)
 
-1.2
-
-**Given** a user is adding a new park 
-
-**When** they choose to add image(s)
-
-**Then** the device camera should activate and display capture 
-
-### Requirement 101: Search Park
+### Requirement 101.0: View Weather at Any Location
 
 #### Scenario
 
-As a user interested in going to the park, they should be able to search parks based on a variety of information, such as name or location
+As a user interested in a knowing the weather at a location, they should be able to search the weather situation for a desired location
 
 #### Dependencies
 
@@ -77,47 +68,35 @@ Device has internet connection
 
 #### Assumptions
 
-Park data in English
+Weather data in English
 
 #### Examples
 
 1.1  
 
-**Given** a feed of park data is available  
+**Given** a feed of weather data is available  
 
-**When**  I search for “Eden”  
+**When**  I search for “Columbus”  
 
 **Then** I should receive at least one result with these attributes:  
 
-Park Name: Eden Park
+Location: Columbus
 
-Location: 950 Eden Park Dr, Cincinnati, OH 45202
+Temperature, Wind, Precipitation
 
 1.2
 
-**Given** a feed of park data is available  
-
-**When** I search for “Burnet”  
-
-**Then** I should receive at least one result with these attributes:   
-
-Park Name: Burnet Woods
-
-Location: 3251 Brookline Ave, Cincinnati, OH 45220
-
-1.3 
-
-**Given** a feed of park data is available  
+**Given** a feed of weather data is available  
 
 **When** I search for “WLIFUHskvuWHGULDS”  
 
 **Then** I should receive zero results (an empty list)
 
-### Requirement 102: View Park
+### Requirement 102: Save Location
 
 #### Scenario
 
-As a user interested in going to the park, they should be able to select a specific park to view park information: name, images, description, location
+As a user interested in knowing the weather at a location at any given time, they should be able to save a location for future viewing
 
 #### Dependencies
 
@@ -133,13 +112,11 @@ Park names / locations are stated in English.
 
 1.1
 
-**Given** a feed of park data is available  
+**Given** a feed of weather data is available  
 
-**When**  
+**When** I select save location
 
--	Select the park Eden Park
-
-**Then** I should see general park information including at least one image, an address, a description, limitations, etc.
+**Then** I should be able to access the saved location from the cache
 
 ## Class Diagram
 
@@ -147,19 +124,19 @@ Park names / locations are stated in English.
 
 ### Class Diagram Description
 
-**MainActivity:** The first screen the user sees. This will have a list of parks, and an option to search for a different park. 
+**MainActivity:** The first screen the user sees. This will have a list of parks, and an option to search for a different weather. 
 
-**ParkDetailsActivity:** A screen that shows details of a park. 
+**WeatherDetailsActivity:** A screen that shows details of a weather. 
 
 **RetrofitInstance:** Boostrap class required for Retrofit. 
 
-**Park:** Noun class that represents a park. 
+**Weather:** Noun class that represents a weather. 
 
-**Activities:** Noun class that represents various activities in a park. 
+**Activities:** Noun class that represents various activities in a weather. 
 
-**IParkDAO:** Interface for Retrofit to find and parse Park JSON. 
+**IWeatherDAO:** Interface for Retrofit to find and parse Weather JSON. 
 
-**IActivitiesDAO:** Interface for Room to persist activity data per park. 
+**IActivitiesDAO:** Interface for Room to persist activity data per weather. 
 
 ## Product Backlog
 
