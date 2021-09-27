@@ -26,7 +26,7 @@ Use this weather application as an easy one-stop area for your trip and weather 
 
 ## Storyboard
 
-![Storyboard]()
+![Storyboard](https://github.com/goel1987/WEATHERIT.git)
 
 ## Functional Requirements
 
