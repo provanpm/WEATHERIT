@@ -120,7 +120,7 @@ Weather  / locations are stated in English.
 
 ## Class Diagram
 
-![ClassDiagram]()
+![ClassDiagram](https://github.com/goel1987/WEATHERIT/blob/main/ClassDiagram.png)
 
 ### Class Diagram Description
 
