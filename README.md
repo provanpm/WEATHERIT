@@ -26,7 +26,9 @@ Use this weather application as an easy one-stop area for your trip and weather 
 
 ## Storyboard
 
-![Storyboard](https://github.com/goel1987/WEATHERIT.git)
+![Storyboard 1](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.46.48%20PM.png)
+![Storyboard 2](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.47.05%20PM.png)
+![Storyboard 3](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.46.57%20PM.png)
 
 ## Functional Requirements
 
@@ -127,8 +129,6 @@ Weather  / locations are stated in English.
 **MainActivity:** The first screen the user sees. This will have a list of parks, and an option to search for a different weather. 
 
 **WeatherDetailsActivity:** A screen that shows details of a weather. 
-
-**RetrofitInstance:** Boostrap class required for Retrofit. 
 
 **Weather:** Noun class that represents a weather. 
 
