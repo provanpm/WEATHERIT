@@ -26,9 +26,9 @@ Use this weather application as an easy one-stop area for your trip and weather 
 
 ## Storyboard
 
-![Storyboard 1](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.46.48%20PM.png)
-![Storyboard 2](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.47.05%20PM.png)
-![Storyboard 3](https://github.com/goel1987/WEATHERIT/blob/main/Screen%20Shot%202021-09-26%20at%2010.46.57%20PM.png)
+![Storyboard 1](https://github.com/goel1987/WEATHERIT/blob/main/Design%20Documents/Screen%20Shot%202021-09-26%20at%2010.46.48%20PM.png)
+![Storyboard 2](https://github.com/goel1987/WEATHERIT/blob/main/Design%20Documents/Screen%20Shot%202021-09-26%20at%2010.46.57%20PM.png)
+![Storyboard 3](https://github.com/goel1987/WEATHERIT/blob/main/Design%20Documents/Screen%20Shot%202021-09-26%20at%2010.47.05%20PM.png)
 
 ## Functional Requirements
 
@@ -122,7 +122,7 @@ Weather  / locations are stated in English.
 
 ## Class Diagram
 
-![ClassDiagram](https://github.com/goel1987/WEATHERIT/blob/main/ClassDiagram.png)
+![ClassDiagram](https://github.com/goel1987/WEATHERIT/blob/main/Design%20Documents/ClassDiagram.png)
 
 ### Class Diagram Description
 
