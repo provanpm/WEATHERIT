@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Weather IT</title>
-</head>
-<body style="background-color:#ADD8E6; text-align:center;">
-<h1>Weather-IT Forecast</h1>
-<br/>
-The details of your forecast here.
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation Finder</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Geolocation</h1>
+        <div id="home-screen">
+            <form id="location-form">
+                <div>
+                    <p id="latitude"><b>Latitude:</b></p>
+                    <p id="longitude"><b>Longitude:</b></p>
+                    <p id="accuracy">Accuracy:</p>
+                </div>
+                <p id="loading">Loading ...</p>
+                <button id="refresh-button" class="btn btn-primary">Refresh</button>
+            </form>
+        </div>
+        <div>
+            <p id="grocery-list"></p>
+        </div>
+    </div>
+    <script src="../scripts/index.js"></script>
 </body>
+
 </html>
