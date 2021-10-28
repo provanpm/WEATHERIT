@@ -41,6 +41,7 @@ refreshButton.addEventListener(`click`, function (event) {
   latitudeDisplay.innerHTML = `<b>Latitude:</b>`;
   longitudeDisplay.innerHTML = `<b>Longitude:</b>`;
   accuracyDisplay.innerHTML = `Accuracy:`;
+  jsonDisplay.innerHTML = `Temperature at your location in degrees Fahrenheit:`;
   loadingStatus.innerHTML = `Loading ...`;
   navigator.geolocation.getCurrentPosition(success, error, options);
 });
