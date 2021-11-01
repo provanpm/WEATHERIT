@@ -9,5 +9,10 @@ public class WeatherITApplicationController {
 	public String start() {
 		return "index";
 	}
+	
+	@RequestMapping(value = "/login")
+	public String available() {
+		return "login";
+	}
 
 }
