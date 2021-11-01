@@ -12,9 +12,10 @@ let options = {
   maximumAge: 0
 };
 
-function success(pos) {
+//added argument to get app to run
+function success(position) {
   loadingStatus.innerHTML = `Success!`;
-  let crd = pos.coords;
+  let crd = position.coords;
   latitudeDisplay.innerHTML = `<b>Latitude:</b> ${crd.latitude}`;
   longitudeDisplay.innerHTML = `<b>Longitude:</b> ${crd.longitude}`;
   accuracyDisplay.innerHTML = `Accuracy: within ${crd.accuracy} meters`;
