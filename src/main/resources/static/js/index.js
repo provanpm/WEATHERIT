@@ -79,7 +79,7 @@ function loadForecast(crd) {
 			let suffix = hour >= 12 ? "PM":"AM"
 			hour = ((hour + 11) % 12 + 1) + suffix;
 
-			hourForecastDisplay.innerHTML += `<li class="list-group-item">${hour} - - Temperature: ${data.hourly[i].temp} °F - - Feels Like: ${data.hourly[i].feels_like}</li>`;
+			hourForecastDisplay.innerHTML += `<li class="list-group-item">${hour} - - Temperature: ${data.hourly[i].temp} °F - - Feels Like: ${data.hourly[i].feels_like} °F</li>`;
 		}
 	})
   })
