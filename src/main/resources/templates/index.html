@@ -11,15 +11,27 @@
 
 <body>
     <div class="container">
-        <h1 id="title">WeatherIT</h1>
-        <div id="home-screen">
-            <form id="location-form">
-                <div>
-                    <p id="json">Temperature at your location:</p>
-                </div>
-                <p id="loading">Loading ...</p>
-                <button id="refresh-button" class="btn btn-primary">Refresh</button>
+        <h1 id="title">WeatherIT Forecast Finder</h1>
+        <div id="forecast-screen">
+            <form>
+                <label for="types">Search By:</label>
+				<select class="form-control" name="types" id="types">
+					<option selected value="zipcode">ZIP Code</option>
+  					<option value="geolocation">Current Location</option>
+  					<option value="city">City Name</option>
+				</select><br>
+				<label for="location-input" id="location-input-display">ZIP Code:</label>
+				<div class="input-group mb-3">
+            		<input class="form-control" type="text" id="location-input" name="location-input"><br>
+  					<div class="input-group-append">
+    					<button id="search-button" class="btn btn-primary">Search</button>
+  					</div>
+				</div>
+				<p id="status"></p>
             </form>
+        	<h2 id="location"></h2>
+        	<ul id="forecast" class="list-group list-group-horizontal">
+  			</ul>
         </div>
     </div>
     <script src="js/index.js"></script>

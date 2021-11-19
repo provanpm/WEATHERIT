@@ -1,7 +1,12 @@
 // Elements
-const refreshButton = document.getElementById(`refresh-button`);
-const loadingStatus = document.getElementById(`loading`);
-const jsonDisplay = document.getElementById(`json`);
+const searchButton = document.getElementById(`search-button`);
+const statusDisplay = document.getElementById(`status`);
+const forecastDisplay = document.getElementById(`forecast`);
+const locationDisplay = document.getElementById(`location`);
+
+const key = `8656dce640c0b11d88c31da21ed3c1fd`;
+const apiWeatherLocation = `https://api.openweathermap.org/data/2.5/weather?`;
+const apiOneCallForecast = `https://api.openweathermap.org/data/2.5/onecall?`;
 
 let options = {
   enableHighAccuracy: true,
@@ -10,44 +15,58 @@ let options = {
 };
 
 function success(pos) {
-  loadingStatus.innerHTML = `Success!`;
+  statusDisplay.innerHTML = `Success!`;
   let crd = pos.coords;
+  loadForecast(crd);
+  loadLocation(crd);
+}
 
-  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${crd.latitude}&lon=${crd.longitude}&units=imperial&appid=8656dce640c0b11d88c31da21ed3c1fd`)
+function error(err) {
+	console.log(err);
+  statusDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
+}
+
+function loadLocation(crd) {
+	fetch(apiWeatherLocation + `lat=${crd.latitude}&lon=${crd.longitude}&units=imperial&appid=${key}`)
   .then(function (response) {
 	response.json().then(function (data) {
-		jsonDisplay.innerHTML = ``;
-		for (let i = 0; i < 8; i++)
+		locationDisplay.innerHTML = data.name;
+	})
+  })
+  .catch(function (err) {
+	console.log(err);
+    locationDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
+  });
+}
+
+function loadForecast(crd) {
+	fetch(apiOneCallForecast + `lat=${crd.latitude}&lon=${crd.longitude}&units=imperial&appid=${key}`)
+  .then(function (response) {
+	response.json().then(function (data) {
+		forecastDisplay.innerHTML = ``;
+		for (let i = 0; i < data.daily.length; i++)
 		{
             let milliseconds = data.daily[i].dt * 1000;
+            let dateObject = new Date(milliseconds);
+            let humanDateFormat = dateObject.toLocaleString();
 
-            let dateObject = new Date(milliseconds)
+			let dateParagraph = `<p>${humanDateFormat}</p>`;
+			let maxParagraph = `<p>Max Temp: ${data.daily[i].temp.max} °F</p>`;
+			let minParagraph = `<p>Min Temp: ${data.daily[i].temp.min} °F</p>`;
+			let newForecastItem = dateParagraph + maxParagraph + minParagraph;
 
-            let humanDateFormat = dateObject.toLocaleString()
-
-			jsonDisplay.innerHTML += humanDateFormat + ` Max Temperature at your location: ` + data.daily[i].temp.max + ` °F <br>`;
-			jsonDisplay.innerHTML += humanDateFormat + ` Min Temperature at your location: ` + data.daily[i].temp.min + ` °F <br>`;
-		    jsonDisplay.innerHTML += `<br>`;
+			forecastDisplay.innerHTML += `<li class="list-group-item">${newForecastItem}</li>`;
 		}
 	})
   })
   .catch(function (err) {
 	console.log(err);
-    jsonDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
+    forecastDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
   });
 }
 
-function error(err) {
-	console.log(err);
-  loadingStatus.innerHTML = `ERROR(${err.code}): ${err.message}`;
-}
-
-refreshButton.addEventListener(`click`, function (event) {
+searchButton.addEventListener(`click`, function (event) {
   event.preventDefault();
-  jsonDisplay.innerHTML = `Temperature at your location:`;
-  loadingStatus.innerHTML = `Loading ...`;
+  statusDisplay.innerHTML = `Loading ...`;
   navigator.geolocation.getCurrentPosition(success, error, options);
 });
-
-loadingStatus.innerHTML = `Loading ...`;
-navigator.geolocation.getCurrentPosition(success, error, options);

@@ -1,8 +1,4 @@
-#home-screen {
-  border: 1px solid black;
-}
-
-#location-form {
+#forecast-screen {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -14,24 +10,4 @@
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 15px;
-}
-
-#latitude {
-  font-size: large;
-}
-
-#longitude {
-  font-size: large;
-}
-
-#accuracy {
-  font-size: large;
-}
-
-#json {
-  font-size: large;
-}
-
-#loading {
-  font-size: small;
 }
