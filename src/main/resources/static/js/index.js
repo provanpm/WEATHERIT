@@ -48,7 +48,10 @@ function loadForecast(crd) {
 		{
             let milliseconds = data.daily[i].dt * 1000;
             let dateObject = new Date(milliseconds);
-            let humanDateFormat = dateObject.toLocaleString();
+			let month = dateObject.getMonth();
+			let day = dateObject.getDate();
+			let year = dateObject.getFullYear();
+            let humanDateFormat = month + '/' + day + '/' + year;
 
 			let dateParagraph = `<p>${humanDateFormat}</p>`;
 			let maxParagraph = `<p>Max Temp: ${data.daily[i].temp.max} °F</p>`;
