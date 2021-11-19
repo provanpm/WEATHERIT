@@ -1,7 +1,8 @@
 // Elements
 const searchButton = document.getElementById(`search-button`);
 const statusDisplay = document.getElementById(`status`);
-const forecastDisplay = document.getElementById(`forecast`);
+const weekForecastDisplay = document.getElementById(`week-forecast`);
+const hourForecastDisplay = document.getElementById(`hour-forecast`);
 const locationDisplay = document.getElementById(`location`);
 
 const key = `8656dce640c0b11d88c31da21ed3c1fd`;
@@ -51,7 +52,7 @@ function loadForecast(crd) {
 	fetch(apiOneCallForecast + `lat=${crd.latitude}&lon=${crd.longitude}&units=imperial&appid=${key}`)
   .then(function (response) {
 	response.json().then(function (data) {
-		forecastDisplay.innerHTML = ``;
+		weekForecastDisplay.innerHTML = ``;
 		for (let i = 0; i < data.daily.length; i++)
 		{
             let milliseconds = data.daily[i].dt * 1000;
@@ -68,13 +69,23 @@ function loadForecast(crd) {
 			let minParagraph = `<p>Min Temp:<br>${data.daily[i].temp.min} °F</p>`;
 			let newForecastItem = dayParagraph + dateParagraph + maxParagraph + minParagraph;
 
-			forecastDisplay.innerHTML += `<li class="list-group-item">${newForecastItem}</li>`;
+			weekForecastDisplay.innerHTML += `<li class="list-group-item">${newForecastItem}</li>`;
+		}
+		for (let i = 0; i < data.hourly.length; i++)
+		{
+			let milliseconds = data.hourly[i].dt * 1000;
+            let dateObject = new Date(milliseconds);
+			let hour = dateObject.getHours();
+			let suffix = hour >= 12 ? "PM":"AM"
+			hour = ((hour + 11) % 12 + 1) + suffix;
+
+			hourForecastDisplay.innerHTML += `<li class="list-group-item">${hour} - - Temperature: ${data.hourly[i].temp} °F - - Feels Like: ${data.hourly[i].feels_like}</li>`;
 		}
 	})
   })
   .catch(function (err) {
 	console.log(err);
-    forecastDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
+    weekForecastDisplay.innerHTML = `ERROR(${err.code}): ${err.message}`;
   });
 }
 
