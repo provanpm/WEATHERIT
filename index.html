@@ -11,16 +11,16 @@
 
 <body>
     <div class="container">
-        <h1 id="title">Enter Location</h1>
+        <h1 id="title">Search Location</h1>
         <div id="forecast-screen">
             <form>
-                <label for="types">Search By:</label>
+                <label for="types">Search By</label>
 				<select class="form-control" name="types" id="types">
-					<option selected value="zipcode">ZIP Code</option>
-  					<option value="geolocation">Current Location</option>
-  					<option value="city">City Name</option>
+					<option selected="selected" value="ZIP Code">ZIP Code</option>
+  					<option value="Current Location">Current Location</option>
+  					<option value="City Name">City Name</option>
 				</select><br>
-				<label for="location-input" id="location-input-display">ZIP Code:</label>
+				<label for="location-input" id="location-input-label">ZIP Code</label>
 				<div class="input-group mb-3">
             		<input class="form-control" type="text" id="location-input" name="location-input"><br>
   					<div class="input-group-append">
@@ -30,10 +30,10 @@
 				<p id="status"></p>
             </form>
         	<h1 id="location"></h1>
-        	<h3>This Week</h3>
+        	<h3 id="week-heading"></h3>
         	<ul id="week-forecast" class="list-group list-group-horizontal">
   			</ul><br>
-  			<h3>Currently</h3>
+  			<h3 id="hour-heading"></h3>
         	<ul id="hour-forecast" class="list-group">
   			</ul>
         </div>
